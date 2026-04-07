@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildGold | Sundarban Raw Honey – B2B Supplier</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================= GLOBAL ================= */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f5ec;
+      color: #222;
+      line-height: 1.65;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #0b3d2e;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background: #0b3d2e;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 28px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #d4af37;
+      color: #0b3d2e;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      height: 88vh;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 40, 30, 0.73);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #0b3d2e;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border: 2px solid #0b3d2e;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #0b3d2e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ================= ABOUT ================= */
+    .about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 50%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      object-fit: cover;
+    }
+
+    .about-text {
+      width: 50%;
+    }
+
+    .about-text h3 {
+      font-size: 24px;
+      color: #0b3d2e;
+    }
+
+    /* ================= PRODUCTS ================= */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e5e0d6;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      font-size: 20px;
+      color: #0b3d2e;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* ================= GALLERY ================= */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    /* ================= STORY SECTION ================= */
+    .story {
+      background: #0b3d2e;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .story h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .story p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .story .small {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-top: 20px;
+    }
+
+    /* ================= B2B SECTION ================= */
+    .b2b {
+      display: flex;
+      gap: 26px;
+    }
+
+    .b2b-box {
+      flex: 1;
+      background: #fff;
+      padding: 30px 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e5e0d6;
+      text-align: center;
+    }
+
+    .b2b-box h3 {
+      font-size: 20px;
+      margin-bottom: 14px;
+      color: #0b3d2e;
+    }
+
+    .b2b-box p {
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* ================= CONTACT ================= */
+    .contact {
+      display: flex;
+      gap: 40px;
+    }
+
+    .contact form {
+      width: 50%;
+    }
+
+    .contact form h3 {
+      font-size: 22px;
+      color: #0b3d2e;
+      margin-bottom: 20px;
+    }
+
+    .contact input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #d4d0c6;
+      font-family: inherit;
+    }
+
+    .contact input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    }
+
+    .contact button {
+      background: #0b3d2e;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #d4af37;
+      color: #0b3d2e;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #0b3d2e;
+      color: #ddd;
+      padding: 24px 0;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .about,
+      .contact,
+      .b2b {
+        flex-direction: column;
+      }
+
+      .about img,
+      .about-text,
+      .contact form {
+        width: 100%;
+      }
+
+      .b2b-box {
+        margin-bottom: 20px;
+      }
+
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      nav ul li {
+        margin-left: 16px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========== HEADER =========== -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">WildGold</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#b2b">B2B Supply</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========== HERO =========== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>WildGold | Sundarban Raw Honey</h1>
+      <p>Harvested from deep Sundarban mangrove forests, collected by local hunters, and supplied directly to B2B buyers.</p>
+      <p>Bulk raw honey | Minimum 5 KG | Ethical Sundarban sourcing</p>
+      <a href="#contact" class="btn">Start Bulk Order</a>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT WILDGOLD =========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Sundarban Story</h2>
+      </div>
+      <div class="about">
+        <img src="https://images.unsplash.com/photo-1524594154908-edd8bfe1e1c3" alt="Honey collector in Sundarban forest">
+        <div class="about-text">
+          <h3>From Jungle to Jar</h3>
+          <p>Our honey comes from deep Sundarban mangrove forests, where local collectors risk life and limb to harvest honey from wild bee colonies hidden in the trees.</p>
+          <p>We partner with these communities to bring raw, unfiltered Sundarban honey directly to businesses—preserving taste, tradition, and sustainability.</p>
+          <p>WildGold is more than a honey brand; it’s a bridge between the Sundarban ecosystem and modern B2B buyers who value authenticity and ethics.</p>
+          <p><strong>Minimum order: 5 KG</strong> | B2B supply only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== PRODUCTS / B2B OFFERINGS =========== -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>For Your Business</h2>
+      </div>
+      <div class="products">
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1514995669114-6081e934b693" alt="Raw Sundarban honey jar">
+          <h3>Raw Sundarban Honey</h3>
+          <p>Unheated, unfiltered, full of natural enzymes and wild‑floral notes from mangrove nectar.</p>
+          <p>Ideal for health brands, wellness centers, and premium food labels.</p>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376" alt="Bulk raw honey drums">
+          <h3>Bulk Raw Supply</h3>
+          <p>5 KG minimum | 10 KG, 20 KG, 50 KG+ drums for manufacturers and brands.</p>
+          <p>Consistent quality, traceable from Sundarban forest to your production line.</p>
+        </div>
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" alt="Natural honeycomb">
+          <h3>Natural Honeycomb</h3>
+          <p>Real honeycomb pieces for cafes, gourmet foodmakers, and wellness markets.</p>
+          <p>Rich, woody, and visually striking for premium packaging concepts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== GALLERY =========== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>In The Sundarban Jungle</h2>
+      </div>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Sundarban mangrove forest">
+        <img src="https://images.unsplash.com/photo-1524594154908-edd8bfe1e1c3" alt="Beehive in trees">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Honey extraction setup">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" alt="Natural honeycomb closeup">
+        <img src="https://images.unsplash.com/photo-1514995669114-6081e934b693" alt="Raw honey jar">
+        <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376" alt="Bulk honey drums">
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SUNDARBAN STORY (NARRATIVE) =========== -->
+  <section class="story" id="story">
+    <h2>The Sundarban Way</h2>
+    <p>In the Sundarbans, honey collectors brave tigers and unpredictable tides to bring honey from wild mangrove forests.</p>
+    <p>Our honey is harvested sustainably, with respect for nature and for the people who
